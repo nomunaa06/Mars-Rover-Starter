@@ -20,8 +20,6 @@ describe("Message class", function() {
         let message1 = new Message("TestTestTestTest", commands);
         expect(message1.commands[0].value).toEqual(1220);
         expect(message1.commands).toBeInstanceOf(Array);
-        console.log(message1.commands);
-        ///dahij harah !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
     });
      
