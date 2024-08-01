@@ -11,15 +11,15 @@ describe("Message class", function() {
     });
 
     test("Test5: constructor sets name", function(){
-        let messageNameTest = new Message("TestTestTestTest", [move =new Command('MOVE', 1220),statusCheck=new Command('STATUS_CHECK')]);
+        let messageNameTest = new Message("TestTestTestTest");
         expect(messageNameTest.name).toEqual("TestTestTestTest");
     });
     
     test("Test6: contains a commands array passed into the constructor as the 2nd argument", function(){
         let commands = [new Command('MODE_CHANGE', 1220), new Command('STATUS_CHECK')];
-        let message1 = new Message("TestTestTestTest", commands);
-        expect(message1.commands[0].value).toEqual(1220);
-        expect(message1.commands).toBeInstanceOf(Array);
+        let testObj = new Message("TestTestTestTest", commands);
+        expect(testObj.commands[0].value).toEqual(1220);
+        expect(testObj.commands).toBeInstanceOf(Array);
 
     });
      
